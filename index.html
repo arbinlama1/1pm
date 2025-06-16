@@ -1,18 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            gap: 10px;
+        }
+
+        .container .box {
+            border: 2px solid green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 50px;
+            gap: 10px;
+        }
+
+        .dark {
+            background-color: black;
+            color: white;
+        }
+
+        .dark .box {
+            border-color: red;
+        }
+        button {
+            padding: 10px 30px;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="box">box 1</div>
-        <div class="box">box 2</div>
-        <div class="box">box 3</div>
-        <div class="box">box 4</div>
-        <div class="box">box 5</div>
-        <div class="box">box 6</div>
+    <div id="con" class="container">
+        <div id="box1" class="box">box 2</div>
+        <div id="box2" class="box">box 3</div>
+        <div id="box3" class="box">box 4</div>
+        <div id="box4" class="box">box 1</div>
+        <div id="box5" class="box">box 5</div>
+        <div id="box6" class="box">box 6</div>
+        <button id="btn">Click me!</button>
     </div>
+    <script>
+        let btn = document.getElementById("btn");
+        let cont = document.getElementById("con");
+        let boxes = document.querySelectorAll(".box");
+
+        let box1 = document.getElementById("box1");
+        let box2 = document.getElementById("box2");
+        let box3 = document.getElementById("box3");
+        let box4 = document.getElementById("box4");
+        let box5 = document.getElementById("box5");
+        let box6 = document.getElementById("box6");
+
+
+        console.log(boxes);
+
+        boxes.forEach((box, index) => {
+            box.addEventListener("click", (e)=> {
+                box.style.color = 'red';
+            })
+        })
+        let box = { box1, box2, box3, box4, box5, box6 };
+        let on = true;
+
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (on == true) {
+                con.classList.add("dark");
+                for (let i = 1; i <= 6; i++) {
+
+                    move(i, 100);
+                }
+                btn.innerText = "Dark";
+                on = false;
+            } else {
+                con.classList.remove("dark");
+                for (let i = 1; i <= 6; i++) {
+                    move(i, -100);
+                }
+                on = true;
+                btn.innerText = "Light";
+            }
+        })
+        let x = 0;
+
+      
+        function move(boxnum, value) {
+            x += value;
+            const currentBox = box["box" + boxnum];
+            currentBox.style.transform = `translateX(${x}px)`;
+            currentBox.style.transition = `2s ease`;
+            setTimeout(() => {
+                currentBox.style.transform = `translateY(${x}px) rotate(45deg)`;
+            }, 2000);
+
+        }
+    </script>
 </body>
+
 </html>
