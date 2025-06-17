@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and time</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body {
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            /* border: 2px solid aqua; */
+            display: flex;
+            gap: 10px;
+        }
+        .com {
+            padding: 5px 10px;
+            font-size: 30px;
+            background-color: gray;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hr com" id="hr">00</div>
+        <div class="min com" id="min">00</div>
+        <div class="sec com" id="sec">00</div>
+    </div>
+    <script>
+        let hr_para = document.getElementById("hr");
+        let min_para = document.getElementById("min");
+        let sec_para = document.getElementById("sec");
+
+        let hr = 0;
+        let min = 0;
+        let sec = 0;
+
+        setInterval(() => {
+            sec++;
+            if(sec === 60) {
+                sec = 0;
+                min ++;
+            }
+            if(min === 60) {
+                min = 0;
+                hr++;
+            }
+            updateTime();
+        },1000);
+        function updateTime() {
+            hr_para.innerHTML = format(hr);
+            min_para.innerHTML = format(min);
+            sec_para.innerHTML = format(sec);
+        }
+
+        function format(num) {
+            return num < 10 ? "0" + num:num;
+        }
+    </script>
+</body>
+
+</html>
