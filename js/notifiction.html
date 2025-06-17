@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            border: 1px solid red;
+        }
+        html, body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+            height: 100vh;
+        }
+
+        .btn {
+            padding: 10px 30px;
+            border-radius: 5px;
+            background-color: green;
+            border: none;
+            color: white;
+            position: relative;
+            font-size: 30px;
+        }
+        .btn span {
+            position: absolute;
+            background-color: red;
+            font-size: 30px;
+            border-radius: 100%;
+            top: -23px;
+            padding: 5px;
+            right: -23px;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .container {
+            position: relative;
+            border: 2px soid black;
+            height: 600px;
+            width: 600px;
+
+        }
+        
+        .container .para {
+            position: absolute;
+            color: red;
+            background-color: black;
+            padding: 10px;
+            width: 100%;
+            bottom: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">upcomming class<span>45</span></button>
+
+    <div class="container">
+        <img src="../image/kagura.jpg" alt="">
+        <h1 class="para">This is about the kagura</h1>
+    </div>
+</body>
+</html>

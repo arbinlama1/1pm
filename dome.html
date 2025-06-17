@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            background-color: black;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            gap: 10px;
+        }
+        .com {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .box {
+            border: 2px solid aqua;
+            height: 300px;
+            width: 250px;
+            flex-direction: column;;
+        }
+    </style>
+</head>
+<body>
+    <div class="com container">
+        <div class="box com ">box 1
+            <p>This is from para</p>
+            <img src="" alt="">
+        </div>
+        <div class="box com ">box 2</div>
+        <div class="box com ">box 3</div>
+        <div class="box com ">box 4</div>
+        <div class="box com ">box 5</div>
+    </div>
+    <script>
+        let con = document.querySelectorAll(".container");
+
+
+        con.forEach((el)=> {
+            el.addEventListener("click", (e) => {
+                e.target.style.color = 'red';
+
+                console.log(e.target.nodeName);
+                console.log(e.target.nodeType);
+                console.log(e.target.firstElementChild);
+                console.log(e.target.lastElementChild)
+            })
+        })
+    </script>
+</body>
+</html>
