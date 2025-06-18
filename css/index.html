@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This about the position</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            background-color: black;
+        }
+
+        .container {
+            background-color: aqua;
+            height: 100vh;
+        }
+
+        .box {
+            background-color: green;
+        }
+
+        .container .box1 {
+            height: 500px;
+            background-color: pink;
+            border: 5px solid blue;
+
+        }
+
+        .container .box2 {
+            height: 100px;
+            border: 5px solid yellow;
+            position: sticky;
+            top: 10px;
+        }
+
+        .container .box3 {
+            background-color: orange;
+            height: 1000px;
+            border: 5px solid red;
+        }
+
+        .container .box4 {
+            background-color: blue;
+            height: 1000px;
+            border: 5px solid green;
+        }
+
+        .container .box5 {
+            background-color: orange;
+            height: 1000px;
+            border: 5px solid violet;
+        }
+
+        button {
+            padding: 20px 100px;
+        }
+
+        .btn {
+            position: fixed;
+            right: 10px;
+            top: 45%;
+        }
+
+        .container .box3 .btn2 {
+            position: sticky;
+            top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1 ">box 1
+            <button class="btn">Click me</button>
+        </div>
+        <div class="box  box2">box 2</div>
+        <div class="box box3">box 3
+            <button class="btn2">This is from box 3</button>
+        </div>
+        <div class="box box4">box 4</div>
+        <div class="box box5">box 5</div>
+    </div>
+</body>
+
+</html>

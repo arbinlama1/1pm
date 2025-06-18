@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 10px;
+        }
+
+        .wrapper .left .red {
+            background-color: red;
+            height: 600px;
+            position: sticky;
+            top: 0;
+        }
+
+        .wrapper .right {
+            display: grid;
+            gap: 10px;
+        }
+
+        .wrapper .box {
+            height: 500px;
+        }
+
+        .wrapper .box1, .box2, .box3, .box4, .box5 {
+            background-color: green;
+            filter: brightness(0.5);
+        }
+        .wrapper .box1:hover,
+        .box2:hover, .box3:hover,
+        .box4:hover,.box5:hover {
+            filter: brightness(1.2);
+        }
+
+        .wrapper .box2 {
+            background-color: yellow;
+        }
+
+        .wrapper .box3 {
+            background-color: orange;
+        }
+
+        .wrapper .box4 {
+            background-color: pink;
+        }
+
+        .wrapper .box5 {
+            background-color: aqua;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: maroon;
+        }
+        .footer1 {
+            height: 200px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="left">
+            <div class="red"></div>
+        </div>
+        <div class="right">
+            <div class="box box1">box 1</div>
+            <div class="box box2">box 2</div>
+            <div class="box box3">box 3</div>
+            <div class="box box4">box 4</div>
+            <div class="box box5">box 5</div>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <div class="footer1"></div>
+</body>
+
+</html>
