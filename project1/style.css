@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "inter", sans-serif;
+    background-color: #CCCCCC;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+.black {
+    padding: 5px 40px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+
+.black .left a {
+    color: white;
+    font-size: 13px;
+}
+
+.black .left a:hover {
+    color: #fa057b;
+}
+
+.black .common {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+}
+
+.black .right a {
+    color: white;
+}
+
+.white img {
+    height: 30px;
+    width: 190px;
+}
+
+.white {
+    font-family: "Saira Semi Condensed", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 30px;
+}
+
+.font-upper {
+    text-transform: uppercase;
+}
+
+.white .left {
+    display: flex;
+    gap: 60px;
+}
+
+.white .left ul li {
+    display: inline;
+}
+
+.white .left ul li a {
+    font-weight: 600;
+    color: black;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.white .left a:hover,
+.white .right a:hover {
+    color: #fa057b;
+}
+
+.white .common-style {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.white .right a {
+    color: black;
+}
+
+section .article {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2px;
+    margin-bottom: 60px;
+
+}
+
+section .article img {
+    filter: brightness(0.65);
+}
+
+section .article .article-common {
+    position: relative;
+}
+
+section .article .article-common .detail {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 30px;
+}
+
+.font-color {
+    color: #CCCCCC;
+}
+
+section .article .article-common .detail a {
+    background-color: #fa057b;
+    width: fit-content;
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+section .article .article-first .detail h1 {
+    font-size: 33px;
+    font-weight: 600;
+    font-family: "Saira Semi Condensed", sans-serif;
+}
+
+section .article .article-head .detail h1 {
+    font-size: 27.3px;
+}
+
+section .article .article-common .detail data {
+    font-size: 12px;
+}
+
+section .article .article-first {
+    grid-row: span 2;
+}
+
+section .wrapper {
+    font-family: "Saira Semi Condensed", sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 0 160px;
+}
+
+section .wrapper .head {
+    text-transform: uppercase;
+    color: #fa057b;
+    margin-top: 20px;
+}
+
+section .wrapper .trend {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 50px;
+    margin: 20px 0;
+}
+
+section .wrapper .trend .trend-first .name {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+section .wrapper .trend .trend-first .name:hover {
+    color: #fa057b;
+    cursor: wait;
+}
+
+section .wrapper .trend .trend-first p {
+    font-size: 12px;
+    font-family: "inter", sans-serif;
+}
+
+section .wrapper .trend .trend-first a .bright-img {
+    height: 200px;
+}
+
+section .wrapper .trend .trend-first a .bright-img {
+    filter: brightness(0.5);
+    transition: filter 0.3s ease;
+}
+
+section .wrapper .trend .trand-first a .bright-img:hover {
+    filter: brightness(1.5);
+    cursor: wait;
+}
+
+section .wrapper .banner-section {
+    margin: 30px 0;
+}
