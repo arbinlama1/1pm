@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Practice</title>
+</head>
+
+<body>
+    <h1>This is about the array method</h1>
+    <script>
+        let arr = [1, 2, 3, 4, 6, "arbin", "bikalpa"];
+        arr.push("milan");
+
+        arr.pop();
+        arr.unshift("hanuman");
+        arr.shift();
+        // splice method take index (startIndex, delete column or element, new value to replace);
+        arr.splice(3, 1, "hanuman1");
+
+        let slice_arr = arr.slice(3);
+        arr.forEach((val) => {
+            console.log(val);
+        })
+        let mapfunction = arr.map((val) => {
+            return val;
+        })
+
+
+
+        let filterfunction = arr.filter((val) => {
+            return val % 2 === 0
+        });
+
+        console.log("This is map function", mapfunction);
+        console.log("This is from fileter function", filterfunction);
+        console.log(slice_arr);
+
+    </script>
+</body>
+
+</html>
