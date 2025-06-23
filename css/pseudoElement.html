@@ -1,11 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PseudoElement</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        background-color: black;
+        color: white;
+      }
+      body::selection {
+        background-color: orange;
+      }
+      form {
+        padding: 20px;
+      }
+      label {
+        font-size: 20px;
+      }
+      input {
+        color: green;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+      input::placeholder {
+        color: aqua;
+      }
+      .para {
+        margin: 10px 0;
+      }
+      .para::first-letter {
+        initial-letter: 2;
+      }
+      #btn {
+        height: 30px;
+        width: 95px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+        color: white;
+      }
+      #btn::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        background-color: green;
+        border-radius: 3px;
+        border: none;
+        z-index: -1;
+      }
+      #btn::before {
+        content: "";
+        position: absolute; /* short hand of the transition
+        height: calc(100% + 6px);
+        width: calc(100% + 6px);
+        top: -3px;
+        left: -3px;
+        background-color: aqua;
+        z-index: -1;
+        border-radius: 5px;
+      }
+
+      h1 {
+        color: green;
+        padding: 10px 0;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      h1::before {
+        content: "";
+        background-color: hotpink;
+        height: 14px;
+        width: 50px;
+      }
+      h1::after {
+        content: "";
+        background-color: hotpink;
+        height: 14px;
+        width: 50px;
+      }
+      .btn {
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        /* transition: background-color;
+        transition-duration: 800ms;
+        transition-timing-function: linear;
+        transition-delay: 1s; */
+
+        /* short hand of the transition */
+
+        transition: background-color 400ms linear 1s;
+      }
+      .btn:hover {
+        background-color: orange;
+        color: black;
+        border: none;
+      }
+      a {
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        letter-spacing: 2px;
+        position: relative;
+      }
+      a::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 20px;
+        background-color: green;
+        left: 0;
+        top: 100%;
+      }
+
+      a::before {
+        content: "";
+        position: absolute;
+        height: 3px;
+        background-color: aqua;
+        top: 100%;
+        left: 20px;
+        width: 0;
+        /* width: calc(100% - 20px); */
+        /* display: none; */
+        transition: 0.400s;
+      }
+
+      a:hover::before {
+        width: calc(100% - 20px);
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <!-- pseudo element => specefic part of elememnt :: -->
+      <label for="for">Name</label>
+      <input type="text" placeholder="Enter your name" />
+      <p class="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+        officiis, corrupti voluptate dicta nesciunt sapiente voluptas sunt ipsum
+        facilis aliquam quidem, repudiandae laborum distinctio? Quidem molestiae
+        labore nobis hic quis!
+      </p>
+      <button id="btn">Click me</button>
+      <button class="btn">Hover me</button>
+
+      <h1>Services</h1>
+    </form>
+
+    <br /><br />
+    <a href="#">Read More</a>
+  </body>
 </html>
