@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+        padding: 0 5px;
+        color: inherit;
+      }
+      ul {
+        list-style: none;
+      }
+      a:hover {
+        color: red;
+      }
+      a:active {
+        color: green;
+      }
+      a:visited {
+        color: blue;
+      }
+      header {
+        background-color: green;
+        color: white;
+        padding: 0 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header .main_contain {
+        display: flex;
+        gap: 20px;
+      }
+      header .main_contain li {
+        position: relative;
+        padding: 20px;
+        white-space: nowrap;
+      }
+      header .main_contain li:hover {
+        background-color: yellow;
+      }
+      header .main_contain li .sub_menu {
+        background-color: black;
+        color: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+      }
+
+      header .main_contain li:hover .sub_menu {
+        display: block;
+      }
+      header .main_contain li .sub_menu .sub_menu__sub {
+        background-color: red;
+        color: black;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        display: none;
+      }
+
+      header .main_contain li .sub_menu li:hover .sub_menu__sub {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Logo</h1>
+        <ul class="main_contain">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Services</a>
+          <ul class="sub_menu">
+            <li><a href="#">Counselling</a>
+            <ul class="sub_menu__sub">
+                <li><a href="#">Documenttation</a></li>
+                <li><a href="#">EPT Class</a></li>
+                <li><a href="#">EPT Class</a></li>
+            </ul>
+            </li>
+            <li><a href="#">Documenttation</a>
+            <ul class="sub_menu__sub">
+                <li><a href="#">Documenttation</a></li>
+                <li><a href="#">EPT Class</a></li>
+                <li><a href="#">EPT Class</a></li>
+            </ul>
+          </li>
+            <li><a href="#">EPT Class</a>
+            <ul class="sub_menu__sub">
+                <li><a href="#">Documenttation</a></li>
+                <li><a href="#">EPT Class</a></li>
+                <li><a href="#">EPT Class</a></li>
+            </ul>
+          </li>
+          </ul>
+          </li>
+          <li><a href="#">Resources</a> </li>
+          <li><a href="#">Contact us</a></li>
+    </header>
+  </body>
+</html>

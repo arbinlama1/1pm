@@ -324,7 +324,12 @@ ul li {
     border: none;
     top: 30px;
 }
-
+.ces__bottom__con {
+    font-size: 18px;
+}
+.last__section__p {
+    font-size: 12px;
+}
 .footer {
     display: flex;
     background-color: black;
