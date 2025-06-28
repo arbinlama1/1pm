@@ -1,0 +1,6 @@
+@mixin after {
+    content: "";
+    top: $top;
+    left: $left;
+    position: absolute;
+}

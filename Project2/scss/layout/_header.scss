@@ -1,0 +1,88 @@
+header {
+    @include d-flex(space-between, center);
+    border-bottom: 2px solid rgba(213, 209, 209, 0.5);
+    position: fixed;
+    width: 100%;
+    @include padding(15px, 10px, 10px, 40px);
+
+    img {
+        @include img-h-w (32px, 220px);
+    }
+
+    ul {
+        @include d_flex($gap: 15px);
+        @include font-transform(capitalize);
+        @include font-weight(500);
+
+        li {
+            position: relative;
+            @include padding(10px, 0, 10px);
+            a {
+                &:hover {
+                    color: $card_bottom_font;
+                }
+                i {
+                    margin-left: 2px;
+                    font-size: 1rem;
+                }
+            }
+            a::after {
+                @include item_after($top: 35px, $left: 0, $height: 5px, $width: 0);
+                background-color: $card_bottom_font;
+                visibility: hidden;
+                transition: all 0.4s linear;
+            }
+
+            .li__inner {
+                @include inner_list;
+                @include padding(30px, 20px);
+                @include border-radius(5px);
+                background-color: rgb(235, 234, 234);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                transition: opacity 2s ease 0.1s, transform 0.5s ease;
+
+                ul {
+                    @include d_flex($flex-direction: column, $align-item: start);
+                    line-height: 1.6;
+                    li>a{
+                
+                            color: red;
+                
+                        i {
+                            transform: rotate(-90deg);
+                            @include padding(0, 10px, 0, 0);
+                            margin-left: 180px;
+                        }
+                    }
+                }
+            }
+
+            &:hover .li__inner {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            &:hover a::after {
+                visibility: visible;
+                width: 100%;
+            }
+        }
+        
+
+        .meet_btn {
+            button {
+                @include font-transform(capitalize);
+                background-color: $btn_background;
+                border: none;
+                @include border-radius(50px);
+                @include padding(7px, 28px);
+                color: white;
+                @include font-weight(500);
+                cursor: pointer;
+            }
+        }
+    }
+
+}

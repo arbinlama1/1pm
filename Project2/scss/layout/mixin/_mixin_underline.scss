@@ -1,0 +1,8 @@
+@mixin item_after($top, $left, $height, $width) {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: $left;
+    height: $height;
+    width: $width;
+}

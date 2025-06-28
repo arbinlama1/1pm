@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+  border-bottom: 2px solid rgba(213, 209, 209, 0.5);
+  position: fixed;
+  width: 100%;
+  padding: 15px 10px 10px 40px;
+}
+header img {
+  height: 32px;
+  width: 220px;
+}
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 15px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+header ul li {
+  position: relative;
+  padding: 10px 0 10px 0;
+}
+header ul li a:hover {
+  color: rgb(163, 154, 250);
+}
+header ul li a i {
+  margin-left: 2px;
+  font-size: 1rem;
+}
+header ul li a::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  height: 5px;
+  width: 0;
+  background-color: rgb(163, 154, 250);
+  visibility: hidden;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+header ul li .li__inner {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 400px;
+  padding: 30px 20px 30px 20px;
+  border-radius: 5px;
+  background-color: rgb(235, 234, 234);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: opacity 2s ease 0.1s, -webkit-transform 0.5s ease;
+  transition: opacity 2s ease 0.1s, -webkit-transform 0.5s ease;
+  transition: opacity 2s ease 0.1s, transform 0.5s ease;
+  transition: opacity 2s ease 0.1s, transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+header ul li .li__inner ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  line-height: 1.6;
+}
+header ul li .li__inner ul li > a {
+  color: red;
+}
+header ul li .li__inner ul li > a i {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  padding: 0 10px 0 0;
+  margin-left: 180px;
+}
+header ul li:hover .li__inner {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+header ul li:hover a::after {
+  visibility: visible;
+  width: 100%;
+}
+header ul .meet_btn button {
+  text-transform: capitalize;
+  background-color: #0E0042;
+  border: none;
+  border-radius: 50px;
+  padding: 7px 28px 7px 28px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+body {
+  margin: 0 auto;
+}
