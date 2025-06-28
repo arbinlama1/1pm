@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 20px 40px;
+            margin: 100px;
+            border: none;
+            background-color: orange;
+            color: white;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.4s;
+            animation: animate 2s linear infinite alternate;
+        }
+
+        span {
+            display: block;
+            animation: text 2s linear infinite alternate;
+        }
+
+        @keyframes animate {
+            0% {
+                background-color: orange;
+                transform: rotate(45deg);
+            }
+            100% {
+                background-color: green;
+                transform: rotate(-45deg);
+            }
+        }
+
+        @keyframes text {
+            0% {
+                transform: rotate(-45deg);
+            }
+            100% {
+                transform: rotate(45deg);
+                color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button><span>Book Now </span></button>
+</body>
+</html>
