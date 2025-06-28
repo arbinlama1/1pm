@@ -1,9 +1,12 @@
 header {
     @include d-flex(space-between, center);
     border-bottom: 2px solid rgba(213, 209, 209, 0.5);
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     @include padding(15px, 10px, 10px, 40px);
+    z-index: 999;
+    background-color: white;
 
     img {
         @include img-h-w (32px, 220px);
@@ -119,13 +122,12 @@ header {
                 width: 100%;
             }
         }
-
-
         .meet_btn {
             button {
                 @include font-transform(capitalize);
                 background-color: $btn_background;
                 border: none;
+                font-size: 16px;
                 @include border-radius(50px);
                 @include padding(7px, 28px);
                 color: white;

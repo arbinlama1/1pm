@@ -21,7 +21,142 @@ img {
   width: 100%;
 }
 
-header {
+.book_consul {
+  margin-top: 250px;
+  background-color: #C4C3CC;
+  height: 400px;
+  padding: 90px 130px 90px 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0px;
+}
+.book_consul .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  height: 200px;
+  width: 43%;
+  line-height: 30px;
+}
+.book_consul .left h2 {
+  font-size: 24px;
+}
+.book_consul .left .left_span {
+  font-size: 16px;
+}
+.book_consul .left .left__btn {
+  border: none;
+  padding: 8px 30px 8px 30px;
+  color: white;
+  background-color: #0E0042;
+  border-radius: 50px;
+  font-size: 15px;
+}
+.book_consul .left .left__btn i {
+  margin-left: 10px;
+}
+.book_consul .right {
+  background-color: blue;
+  height: 200px;
+  width: 100%;
+}
+
+.hero {
+  margin: 1.5rem 0;
+  height: 100vh;
+  text-align: center;
+  line-height: 3.5rem;
+  padding: 0 70px 0 70px;
+  background-color: white;
+}
+.hero .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0px;
+}
+.hero .container .hero__head {
+  font-size: 48px;
+  font-weight: 300;
+}
+.hero .container h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb(111, 101, 151);
+}
+.hero .container .hero__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+}
+.hero .container .hero__button .hero__button__btn {
+  border: none;
+  border: 1px solid rgb(163, 154, 250);
+  padding: 8px 20px 8px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+}
+.hero .container .hero__button .hero__button__btn i {
+  padding: 0 0 0 10px;
+}
+.hero .container img {
+  height: auto;
+  width: 100%;
+}
+.hero .container .container__find .container__head {
+  font-size: 32px;
+  font-weight: 300;
+}
+.hero .container .container__find .container__find__des {
+  font-size: 18px;
+  color: rgb(111, 101, 151);
+}
+.hero .container .container__event {
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,10 +171,56 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 10px;
+  width: 650px;
+}
+.hero .container .container__event .event_first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero .container .container__event .event_first img {
+  height: 150px;
+  width: 150px;
+}
+.hero .container .container__event .event_first span {
+  font-size: 20px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0px;
   border-bottom: 2px solid rgba(213, 209, 209, 0.5);
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   padding: 15px 10px 10px 40px;
+  z-index: 999;
+  background-color: white;
 }
 header img {
   height: 32px;
@@ -118,7 +299,7 @@ header ul li .li__inner ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
+  gap: 0px;
   line-height: 1.6;
 }
 header ul li .li__inner ul li {
@@ -202,6 +383,7 @@ header ul .meet_btn button {
   text-transform: capitalize;
   background-color: #0E0042;
   border: none;
+  font-size: 16px;
   border-radius: 50px;
   padding: 7px 28px 7px 28px;
   color: white;

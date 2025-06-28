@@ -1,0 +1,74 @@
+.hero {
+    margin: 1.5rem 0;
+    height: 100vh;
+    text-align: center;
+    line-height: 3.5rem;
+    @include padding(0, 70px, 0);
+    background-color: white;
+
+    .container {
+        .hero__head {
+            font-size: 48px;
+            font-weight: 300;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+            color: $font-fade;
+        }
+
+        .hero__button {
+            @include d_flex($justify-content: center, $align-item: center, $gap: 10px);
+
+            .hero__button__btn {
+                border: none;
+                border: 1px solid $card_bottom_font;
+                @include padding(8px, 20px);
+                border-radius: 50px;
+                font-weight: 600;
+                font-size: 15px;
+
+                i {
+                    @include padding(0, 0, 0, 10px);
+                }
+            }
+        }
+
+        img {
+            @include img-h-w(auto, 100%);
+        }
+
+        .container__find {
+            .container__head {
+                font-size: 32px;
+                font-weight: 300;
+            }
+
+            .container__find__des {
+                font-size: 18px;
+                color: $font-fade;
+            }
+        }
+
+        @include d_flex($flex-direction: column, $align-item: center);
+
+        .container__event {
+            margin-top: 40px;
+            @include d_flex($justify-content: space-between, $align-item: center, $gap: 10px);
+            width: 650px;
+           
+            .event_first {
+                @include d_flex($flex-direction: column, $justify-content: center, $align-item: center);
+                margin: 0 auto;
+                text-align: center;
+                img {
+                    @include img-h-w(150px, 150px);
+                }
+                span {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

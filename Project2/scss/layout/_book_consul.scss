@@ -1,0 +1,38 @@
+.book_consul {
+    margin-top: 250px;
+    background-color: $book_con_back;
+    height: 400px;
+    @include padding(90px, 130px);
+    @include d_flex($justify-content: space-between);
+
+    .left {
+        @include d_flex($flex-direction: column, $gap: 10px);
+        height: 200px;
+        width: 43%;
+        line-height: 30px;
+        h2 {
+            font-size: 24px;
+        }
+        .left_span {
+            font-size: 16px;
+        }
+        .left__btn {
+            border: none;
+            @include padding(8px, 30px);
+            color: white;
+            background-color: $btn_background;
+            border-radius: 50px;
+            font-size: 15px;
+            i {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .right {
+        background-color: blue;
+        height: 200px;
+        width: 100%;
+    }
+
+}
