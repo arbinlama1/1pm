@@ -52,9 +52,9 @@ header ul {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -62,10 +62,10 @@ header ul {
   gap: 15px;
   text-transform: capitalize;
   font-weight: 500;
+  padding: 10px 0 10px 0;
 }
 header ul li {
   position: relative;
-  padding: 10px 0 10px 0;
 }
 header ul li a:hover {
   color: rgb(163, 154, 250);
@@ -77,9 +77,9 @@ header ul li a i {
 header ul li a::after {
   content: "";
   position: absolute;
-  top: 35px;
+  top: 22px;
   left: 0;
-  height: 5px;
+  height: 3px;
   width: 0;
   background-color: rgb(163, 154, 250);
   visibility: hidden;
@@ -91,17 +91,18 @@ header ul li .li__inner {
   top: 100%;
   left: 0;
   width: 400px;
-  padding: 30px 20px 30px 20px;
+  padding: 20px 20px 20px 20px;
   border-radius: 5px;
+  margin-top: 5px;
   background-color: rgb(235, 234, 234);
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
-  -webkit-transition: opacity 2s ease 0.1s, -webkit-transform 0.5s ease;
-  transition: opacity 2s ease 0.1s, -webkit-transform 0.5s ease;
-  transition: opacity 2s ease 0.1s, transform 0.5s ease;
-  transition: opacity 2s ease 0.1s, transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transition: opacity 2s ease, -webkit-transform 0.5s ease;
+  transition: opacity 2s ease, -webkit-transform 0.5s ease;
+  transition: opacity 2s ease, transform 0.5s ease;
+  transition: opacity 2s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 header ul li .li__inner ul {
   display: -webkit-box;
@@ -120,14 +121,72 @@ header ul li .li__inner ul {
   gap: 10px;
   line-height: 1.6;
 }
-header ul li .li__inner ul li > a {
-  color: red;
+header ul li .li__inner ul li {
+  position: relative;
 }
-header ul li .li__inner ul li > a i {
+header ul li .li__inner ul li a {
+  color: black;
+}
+header ul li .li__inner ul li a i {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   padding: 0 10px 0 0;
-  margin-left: 180px;
+  margin-left: 100px;
+}
+header ul li .li__inner ul li a::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  height: 3px;
+  width: 100px;
+  background-color: rgb(163, 154, 250);
+  visibility: hidden;
+  -webkit-transition: none;
+  transition: none;
+}
+header ul li .li__inner ul li:hover a::after {
+  visibility: visible;
+}
+header ul li .li__inner ul li .student__iner_list {
+  background-color: #D3D0E5;
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 100%;
+  height: auto;
+  width: 300px;
+  padding: 20px 0 20px 25px;
+  border-radius: 20px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: opacity 2s ease, -webkit-transform 0.5s ease;
+  transition: opacity 2s ease, -webkit-transform 0.5s ease;
+  transition: opacity 2s ease, transform 0.5s ease;
+  transition: opacity 2s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+header ul li .li__inner ul li .student__iner_list ul li a::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 0;
+  height: 3px;
+  width: 100px;
+  background-color: rgb(163, 154, 250);
+  visibility: hidden;
+  -webkit-transition: none;
+  transition: none;
+}
+header ul li .li__inner ul li .student__iner_list ul li:hover a::after {
+  visibility: visible;
+}
+header ul li .li__inner ul li:hover .student__iner_list {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 header ul li:hover .li__inner {
   -webkit-transform: translateY(0);

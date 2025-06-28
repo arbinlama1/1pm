@@ -10,24 +10,27 @@ header {
     }
 
     ul {
-        @include d_flex($gap: 15px);
+        @include d_flex($gap: 15px,$align-item: center);
         @include font-transform(capitalize);
         @include font-weight(500);
+        @include padding(10px, 0, 10px);
 
         li {
             position: relative;
-            @include padding(10px, 0, 10px);
+
             a {
                 &:hover {
                     color: $card_bottom_font;
                 }
+
                 i {
                     margin-left: 2px;
                     font-size: 1rem;
                 }
             }
+
             a::after {
-                @include item_after($top: 35px, $left: 0, $height: 5px, $width: 0);
+                @include item_after($top: 22px, $left: 0, $height: 3px, $width: 0);
                 background-color: $card_bottom_font;
                 visibility: hidden;
                 transition: all 0.4s linear;
@@ -35,25 +38,71 @@ header {
 
             .li__inner {
                 @include inner_list;
-                @include padding(30px, 20px);
+                @include padding(20px, 20px);
                 @include border-radius(5px);
+                margin-top: 5px;
                 background-color: rgb(235, 234, 234);
                 opacity: 0;
                 visibility: hidden;
                 transform: translateY(-10px);
-                transition: opacity 2s ease 0.1s, transform 0.5s ease;
+                transition: opacity 2s ease, transform 0.5s ease;
 
                 ul {
                     @include d_flex($flex-direction: column, $align-item: start);
                     line-height: 1.6;
-                    li>a{
-                
-                            color: red;
-                
-                        i {
-                            transform: rotate(-90deg);
-                            @include padding(0, 10px, 0, 0);
-                            margin-left: 180px;
+
+                    li {
+                        position: relative;
+                        a {
+                            color: black;
+
+                            i {
+                                transform: rotate(-90deg);
+                                @include padding(0, 10px, 0, 0);
+                                margin-left: 100px;
+                            }
+                        }
+
+                        a::after {
+                            @include item_after($top: 30px, $left: 0, $height: 3px, $width: 100px);
+                            background-color: $card_bottom_font;
+                            visibility: hidden;
+                            transition: none;
+                        }
+
+                        &:hover a::after {
+                            visibility: visible;
+                        }
+
+                        .student__iner_list {
+                            background-color: #D3D0E5;
+                            @include item_after(-20px, 100%, auto, 300px);
+                            @include padding(20px, 0, 20px, 25px);
+                            border-radius: 20px;
+                            visibility: hidden;
+                            opacity: 0;
+                            transform: translateY(-10px);
+                            transition: opacity 2s ease, transform 0.5s ease;
+
+                            ul {
+                                li {
+                                    a::after {
+                                        @include item_after($top: 25px, $left: 0, $height: 3px, $width: 100px);
+                                        background-color: $card_bottom_font;
+                                        visibility: hidden;
+                                        transition: none;
+                                    }
+                                    &:hover a::after {
+                                        visibility: visible;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:hover .student__iner_list {
+                            visibility: visible;
+                            opacity: 1;
+                            transform: translateY(0);
                         }
                     }
                 }
@@ -64,12 +113,13 @@ header {
                 opacity: 1;
                 visibility: visible;
             }
+
             &:hover a::after {
                 visibility: visible;
                 width: 100%;
             }
         }
-        
+
 
         .meet_btn {
             button {
