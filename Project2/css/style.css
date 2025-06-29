@@ -23,23 +23,23 @@ img {
 
 .book_consul {
   margin-top: 250px;
-  background-color: #C4C3CC;
-  height: 400px;
-  padding: 90px 130px 90px 130px;
+  background-color: #F5F4FF;
+  padding: 80px 130px 80px 130px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 0px;
+  position: relative;
 }
 .book_consul .left {
   display: -webkit-box;
@@ -62,9 +62,11 @@ img {
 }
 .book_consul .left h2 {
   font-size: 24px;
+  font-weight: 300;
 }
 .book_consul .left .left_span {
   font-size: 16px;
+  color: rgb(111, 101, 151);
 }
 .book_consul .left .left__btn {
   border: none;
@@ -77,10 +79,66 @@ img {
 .book_consul .left .left__btn i {
   margin-left: 10px;
 }
+.book_consul .left .left__btn:hover {
+  background-color: #867FCC;
+  color: white;
+}
+.book_consul .book__consul__arrow {
+  background-color: #F5F4FF;
+}
+.book_consul .book__consul__arrow .right__right i {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: absolute;
+  top: 45%;
+  right: 100px;
+  font-size: 25px;
+}
+.book_consul .book__consul__arrow .right__left {
+  background-color: #F5F4FF;
+}
+.book_consul .book__consul__arrow .right__left i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+  top: 45%;
+  left: 870px;
+  font-size: 25px;
+}
 .book_consul .right {
-  background-color: blue;
+  height: 300px;
+  width: 500px;
+}
+.book_consul .right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0px;
+}
+.book_consul .right ul li a img {
   height: 200px;
-  width: 100%;
+  width: 200px;
+}
+.book_consul .right ul li:hover + * {
+  opacity: 0.5;
+}
+.book_consul .right ul li:has(+ *:hover) {
+  opacity: 0.5;
+}
+
+.take_counsellor {
+  height: 100vh;
+  background-color: red;
 }
 
 .hero {
@@ -139,9 +197,15 @@ img {
   border-radius: 50px;
   font-weight: 600;
   font-size: 15px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .hero .container .hero__button .hero__button__btn i {
   padding: 0 0 0 10px;
+}
+.hero .container .hero__button .hero__button__btn:hover {
+  background-color: #867FCC;
+  color: white;
 }
 .hero .container img {
   height: auto;

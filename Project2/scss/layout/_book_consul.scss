@@ -1,21 +1,26 @@
 .book_consul {
     margin-top: 250px;
     background-color: $book_con_back;
-    height: 400px;
-    @include padding(90px, 130px);
-    @include d_flex($justify-content: space-between);
+    @include padding(80px, 130px);
+    @include d_flex($justify-content: space-between, $align-item: center);
+    position: relative;
 
     .left {
         @include d_flex($flex-direction: column, $gap: 10px);
         height: 200px;
         width: 43%;
         line-height: 30px;
+
         h2 {
             font-size: 24px;
+            font-weight: 300;
         }
+
         .left_span {
             font-size: 16px;
+            color: $font-fade;
         }
+
         .left__btn {
             border: none;
             @include padding(8px, 30px);
@@ -23,16 +28,73 @@
             background-color: $btn_background;
             border-radius: 50px;
             font-size: 15px;
+
             i {
                 margin-left: 10px;
+            }
+            &:hover {
+                @include hover_effect($background-color: $hover_color, $color: white);
+            }
+        }
+
+    }
+
+    .book__consul__arrow {
+        background-color: $book_con_back;
+
+        .right__right {
+            i {
+                transform: rotate(-90deg);
+                position: absolute;
+                top: 45%;
+                right: 100px;
+                font-size: 25px;
+            }
+        }
+
+        .right__left {
+            background-color: $book_con_back;
+
+            i {
+                transform: rotate(90deg);
+                position: absolute;
+                top: 45%;
+                left: 870px;
+                font-size: 25px;
             }
         }
     }
 
     .right {
-        background-color: blue;
-        height: 200px;
-        width: 100%;
+        // background-color: blue;
+        // overflow: hidden;
+        height: 300px;
+        width: 500px;
+
+        ul {
+            @include d_flex($justify-content: center, $align-item: center);
+
+            li {
+                a {
+                    img {
+                        @include img-h-w(200px, 200px);
+                    }
+                }
+
+                &:hover + * {
+                    opacity: 0.5;
+                }
+            }
+
+            li:has(+ *:hover) {
+                opacity: 0.5;
+            }
+        }
     }
 
+}
+
+.take_counsellor {
+    height: 100vh;
+    background-color: red;
 }
