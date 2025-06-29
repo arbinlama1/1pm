@@ -6,6 +6,36 @@
     @include padding(0, 70px, 0);
     background-color: white;
 
+    .hero__skyla {
+        position: fixed;
+        right: 20px;
+        bottom: 90px;
+        z-index: 1;
+
+        .hero__skyla__items {
+            position: relative;
+            height: 55px;
+            width: 55px;
+
+            .skyla {
+                @include img-h-w(55px, 55px);
+                position: absolute;
+                left: 2.5px;
+                top: 2.5px;
+                z-index: 1;
+            }
+
+            .hero__circle {
+                position: absolute;
+                height: calc(100% + 5px);
+                width: calc(100% + 5px);
+                border-radius: 50px;
+                background-color: white;
+                border: 3px solid $btn_background;
+            }
+        }
+    }
+
     .container {
         .hero__head {
             font-size: 48px;
@@ -41,28 +71,41 @@
         }
 
         img {
-            @include img-h-w(auto, 100%);
+            @include img-h-w(auto, 96%);
         }
 
         .container__find {
+            
             .container__head {
                 font-size: 32px;
                 font-weight: 300;
             }
-
+            
             .container__find__des {
                 font-size: 18px;
                 color: $font-fade;
             }
         }
-
+        
         @include d_flex($flex-direction: column, $align-item: center);
-
+        
         .container__event {
             margin-top: 40px;
             @include d_flex($justify-content: space-between, $align-item: center, $gap: 10px);
             width: 650px;
-
+            
+            .container__find__arrow {
+                position: fixed;
+                bottom: 95px;
+                font-size: 20px;
+                right: 100px;
+                transform: rotate(180deg);
+                color: white;
+                background-color: black;
+                @include padding(5px, 5px);
+                border-radius: 3px;
+                z-index: 1;
+            }
             .event_first {
                 @include d_flex($flex-direction: column, $justify-content: center, $align-item: center);
                 margin: 0 auto;

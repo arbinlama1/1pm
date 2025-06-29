@@ -106,6 +106,7 @@ img {
   font-size: 25px;
 }
 .book_consul .right {
+  overflow: hidden;
   height: 300px;
   width: 500px;
 }
@@ -148,6 +149,33 @@ img {
   line-height: 3.5rem;
   padding: 0 70px 0 70px;
   background-color: white;
+}
+.hero .hero__skyla {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  z-index: 1;
+}
+.hero .hero__skyla .hero__skyla__items {
+  position: relative;
+  height: 55px;
+  width: 55px;
+}
+.hero .hero__skyla .hero__skyla__items .skyla {
+  height: 55px;
+  width: 55px;
+  position: absolute;
+  left: 2.5px;
+  top: 2.5px;
+  z-index: 1;
+}
+.hero .hero__skyla .hero__skyla__items .hero__circle {
+  position: absolute;
+  height: calc(100% + 5px);
+  width: calc(100% + 5px);
+  border-radius: 50px;
+  background-color: white;
+  border: 3px solid #0E0042;
 }
 .hero .container {
   display: -webkit-box;
@@ -209,7 +237,7 @@ img {
 }
 .hero .container img {
   height: auto;
-  width: 100%;
+  width: 96%;
 }
 .hero .container .container__find .container__head {
   font-size: 32px;
@@ -236,6 +264,19 @@ img {
           flex-direction: row;
   gap: 10px;
   width: 650px;
+}
+.hero .container .container__event .container__find__arrow {
+  position: fixed;
+  bottom: 95px;
+  font-size: 20px;
+  right: 100px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  color: white;
+  background-color: black;
+  padding: 5px 5px 5px 5px;
+  border-radius: 3px;
+  z-index: 1;
 }
 .hero .container .container__event .event_first {
   display: -webkit-box;
