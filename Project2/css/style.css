@@ -422,7 +422,7 @@ header ul li .li__inner ul li a i {
 header ul li .li__inner ul li a::after {
   content: "";
   position: absolute;
-  top: 30px;
+  top: 25px;
   left: 0;
   height: 3px;
   width: 100px;
@@ -484,7 +484,7 @@ header ul li:hover a::after {
   visibility: visible;
   width: 100%;
 }
-header ul .meet_btn button {
+header ul .meet_btn {
   text-transform: capitalize;
   background-color: #0E0042;
   border: none;
