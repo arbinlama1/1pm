@@ -69,12 +69,12 @@ img {
   color: rgb(111, 101, 151);
 }
 .book_consul .left .left__btn {
-  border: none;
-  padding: 8px 30px 8px 30px;
+  border: 0;
   color: white;
   background-color: #0E0042;
   border-radius: 50px;
   font-size: 15px;
+  padding: 15px 20px 15px 20px;
 }
 .book_consul .left .left__btn i {
   margin-left: 10px;
@@ -125,6 +125,8 @@ img {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 0px;
+  -webkit-animation: animate 4s infinite linear;
+          animation: animate 4s infinite linear;
 }
 .book_consul .right ul li a img {
   height: 200px;
@@ -138,10 +140,76 @@ img {
 }
 
 .take_counsellor {
-  height: 100vh;
-  background-color: red;
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 20px;
+  padding: 0 130px 0 130px;
+}
+.take_counsellor .take__counsellor__video {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+.take_counsellor .take__counsellor__video video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.take_counsellor .take__counsellor__detail .take__counsellor__head {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.take_counsellor .take__counsellor__detail .left__btn {
+  margin-top: 20px;
+  border: 0;
+  color: white;
+  background-color: #0E0042;
+  border-radius: 50px;
+  font-size: 16px;
+  padding: 20px 30px 20px 30px;
+}
+.take_counsellor .take__counsellor__detail .left__btn i {
+  margin-left: 10px;
+}
+.take_counsellor .take__counsellor__detail .left__btn:hover {
+  background-color: #867FCC;
+  color: white;
 }
 
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px) translateZ(20px);
+            transform: translateX(-100px) translateZ(20px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px) translateZ(20px);
+            transform: translateX(-100px) translateZ(20px);
+  }
+}
 .hero {
   margin: 1.5rem 0;
   height: 100vh;

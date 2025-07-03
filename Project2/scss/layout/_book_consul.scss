@@ -20,21 +20,9 @@
             font-size: 16px;
             color: $font-fade;
         }
-
         .left__btn {
-            border: none;
-            @include padding(8px, 30px);
-            color: white;
-            background-color: $btn_background;
-            border-radius: 50px;
-            font-size: 15px;
-
-            i {
-                margin-left: 10px;
-            }
-            &:hover {
-                @include hover_effect($background-color: $hover_color, $color: white);
-            }
+            @include Button($background-color: $btn_background,$border-radius: 50px, $font-size: 15px);
+            @include padding(15px, 20px);
         }
 
     }
@@ -73,6 +61,7 @@
 
         ul {
             @include d_flex($justify-content: center, $align-item: center);
+            animation: animate 4s infinite linear;
 
             li {
                 a {
@@ -81,7 +70,7 @@
                     }
                 }
 
-                &:hover + * {
+                &:hover+* {
                     opacity: 0.5;
                 }
             }
@@ -95,6 +84,41 @@
 }
 
 .take_counsellor {
-    height: 100vh;
-    background-color: red;
+    margin-top: 3rem;
+    @include d-flex($gap: 20px, $align-item: center);
+    @include padding(0, 130px);
+
+    .take__counsellor__video {
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
+
+        video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .take__counsellor__detail {
+        .take__counsellor__head {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .left__btn {
+            margin-top: 20px;
+            @include Button($border-radius: 50px, $background-color: $btn_background);
+            @include padding(20px, 30px);
+        }
+    }
+
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: translateX(-100px) translateZ(20px);
+    }
 }

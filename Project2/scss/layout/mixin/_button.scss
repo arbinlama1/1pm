@@ -1,0 +1,14 @@
+@mixin Button($border: 0, $color: white, $background-color: green, $border-radius: 10px, $font-size: 16px) {
+        border: $border;
+        color: $color;
+        background-color: $background-color;
+        border-radius: $border-radius;
+        font-size: $font-size;
+        i {
+            margin-left: 10px;
+        }
+
+        &:hover {
+            @include hover_effect($background-color: $hover_color, $color: white);
+        }
+}
