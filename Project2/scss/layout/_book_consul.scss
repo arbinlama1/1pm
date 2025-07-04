@@ -1,5 +1,5 @@
 .book_consul {
-    margin-top: 250px;
+    margin-top: 10rem;
     background-color: $book_con_back;
     @include padding(80px, 130px);
     @include d_flex($justify-content: space-between, $align-item: center);

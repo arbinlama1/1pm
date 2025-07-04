@@ -1,0 +1,46 @@
+footer {
+    @include padding(4rem, 8rem);
+    background-color: $btn_background;
+    height: 100vh;
+
+    .footer__top {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        .footer__left {
+            @include d-flex($gap: 1rem, $flex-direction: column);
+
+            .logo {
+                height: 50px;
+                width: 300px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .footer__link {
+                .footer__link__head {
+                    color: white;
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+
+                .footer__item {
+                    a {
+                        i {
+                            color: white;
+                            font-size: 1.1rem;
+                            margin-top: 1rem;
+                            margin-right: 1rem;
+                            &:hover {
+                                background-color: green;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

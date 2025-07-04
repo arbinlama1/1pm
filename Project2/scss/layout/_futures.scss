@@ -1,0 +1,70 @@
+.futures {
+    @include padding(8rem);
+    background-color: #E0DFE4;
+    @include d-flex($gap: 1rem, $justify-content: space-between, $align-item: center);
+    .left {
+        width: 420px;
+        .head {
+            width: 250px;
+            font-size: 32px;
+            font-weight: 300;
+            color: black;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 1.5rem;
+            color: $font-fade;
+        }
+    }
+    .right {
+        form {
+            h3 {
+                font-size: 1.5rem;
+            }
+            input::placeholder {
+                color: black;
+            }
+            .form__num {
+                display: flex;
+                align-items: center;
+                .num {
+                    width: 90px;
+                    text-align: center;
+                    margin-right: 1rem;
+                }
+            }
+            .form__common {
+                border: 1px solid $hover-color;
+                display: block;
+                width: 100%;
+                @include padding(0.8rem, 0.9rem);
+                border-radius: 0.6rem;
+                margin-top: 1.5rem;
+                background-color: white;
+                font-size: 1.1rem;
+            }
+           .check {
+            display: flex;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+            p {
+                margin-left: 1rem;
+                font-size: 14px;
+                font-weight: 500;
+                a {
+                    color: $hover-color;
+                }
+            }
+           }
+           text-align: center;
+           .form__btn {
+            margin-top: 1rem;
+            @include Button($border-radius: 50px, $background-color: $btn_background);
+            @include padding(0.7rem, 2rem);
+            &:hover {
+                background-color: $btn_background;
+            }
+           }
+        }
+    }
+}

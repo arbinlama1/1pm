@@ -1,0 +1,54 @@
+.education {
+    margin-top: 3rem;
+    @include padding(3rem, 8rem);
+    background-color: $book_con_back;
+
+    .education__head {
+        line-height: 3rem;
+        text-align: center;
+
+        .education__head__top {
+            font-size: 32px;
+            font-weight: 300;
+        }
+
+        .education__head__sub {
+            font-size: 18px;
+            color: $font-fade;
+        }
+
+    }
+
+    .education__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.4rem;
+        color: white;
+        margin: 1rem 0;
+        .education__content_item {
+            border-radius: 20px;
+            @include padding(1rem);
+            background-color: $hover-color;
+            .quote {
+                font-size: 3rem;
+            }
+            .education__content__des {
+                font-weight: 300;
+                line-height: 24px;
+            }
+            .education__content__author {
+                margin: 1rem;
+                @include d-flex($gap: 1rem);
+                img {
+                    height: 50px;
+                    width: 50px;
+                }
+                .author__name {
+                    .author {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
