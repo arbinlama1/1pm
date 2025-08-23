@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.card {
+  background-color: black;
+  color: white;
+  padding: 0 2rem;
+}
+.person {
+  display: flex;
+  border: 2px solid white;
+  justify-content: space-between;
+  padding: 1rem;
+  line-height: 2rem;
+}

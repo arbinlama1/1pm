@@ -1,0 +1,20 @@
+footer {
+    height: 300px;
+    background-color: black;
+    color: white;
+    padding: 1rem 32px;
+    display: flex;
+    align-items: center;
+}
+footer .quick .link {
+    display: flex;
+    flex-direction: column;
+}
+ a {
+    color: white;
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+}
+.link a:hover {
+    background-color: orange;
+}

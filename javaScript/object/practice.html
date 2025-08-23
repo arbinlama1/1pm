@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid black;
+            text-transform: capitalize;
+        }
+        #container {
+            height: 100px;
+            text-align: center;
+        }
+        .para {
+            background-color: green;
+            color: orange;
+        }
+        .para1 {
+            border: 0.3rem solid black;
+        }
+        button {
+            margin-top: 5rem;
+            font-size: 20px;
+            border: none;
+            box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: aqua;
+            color: white;
+        }
+        #box {
+            height: 100px;
+            width: 100px;
+            margin-top: 200px;
+            color: white;
+            text-align: center;
+             transition: all 0.05s ease;
+        }
+        .box {
+            background-color: black;
+        }
+        .back {
+            background-color: green;
+        }
+        .inp {
+            margin-top: 50px;
+        }
+    </style>
+    
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <h1>Table for product</h1>
+            <th>S.N</th>
+            <th>name</th>
+            <th>price</th>
+            <th>quantiy</th>
+            <th>catagory</th>
+        </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    <div id="container"></div>
+    <input type="text" id="input" class="inp" placeholder="Type here">
+    <div id="box" class="box">I am box</div>
+    <button id="btn">Click me</button>
+    <script src="practice.js"></script>
+</body>
+</html>

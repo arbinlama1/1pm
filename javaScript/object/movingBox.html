@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .cbox {
+            height: 100px;
+            width: 100px;
+            background-color: green;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="cbox"></div>
+    <script>
+        let box = document.getElementById('box');
+        document.addEventListener("mousemove", (e) => {
+            const offsetX = box.offsetWidth / 0.5;
+            const offsetY = box.offsetHeight / 2;
+            box.style.left = (e.pageX - offsetX) + "px";
+        
+            box.style.top = (e.pageY - offsetY) + "px";
+        });
+    </script>
+</body>
+</html>

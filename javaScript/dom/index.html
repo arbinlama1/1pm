@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="tagline">This is paragraph</p>
+
+    <script>
+        let text = document.getElementById("tagline");
+        text.innerHTML = "Wellcome to DOM";
+        text.style.color="white";
+        text.style.background= "green";
+        text.style.padding= "3rem";
+        text.style.textAlign = "center";
+        text.style.fontSize = '2rem';
+
+        //using innerHtml we can add or change innerHtml element
+        text.innerHTML= "Wellcome to <strong>DOM</strong>"
+
+        console.log(text);
+    </script>
+</body>
+</html>

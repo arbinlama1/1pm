@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .bulb {
+            background-color: gray;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        .btn {
+            margin-top: 2rem;
+        }
+
+        .btn-com {
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+
+        .btn-com:hover {
+            background-color: green;
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bulb" id="bulb"></div>
+    <div class="btn">
+        <button class="btn-com" id="on_btn">ON</button>
+        <button class="btn-com" id="off_btn">OFF</button>
+    </div>
+
+    <script>
+        let bulb = document.getElementById("bulb");
+        let on_btn = document.getElementById("on_btn");
+        let off_btn = document.getElementById("off_btn");
+
+        on_btn.addEventListener("click", function () {
+            bulb.style.background = "green";
+        })
+
+        off_btn.addEventListener("click", function () {
+            bulb.style.background = "red";
+        })
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="password" name="password" id="password">
+    <button id="show_btn">Show</button>
+    <script>
+        let password = document.querySelector("#password");
+        let show = document.querySelector("#show_btn");
+        let status = 0;
+        show.addEventListener("click", () => {
+            // if(status == 0) {
+            //     password.setAttribute("type", "text");
+            //     status = 1;
+            //     show.innerText = "Hide";
+            // }
+            // else {
+            //     show.innerText = "Show";
+            //     status = 0;
+            //     password.setAttribute("type", "password")
+            // }
+
+
+
+            // this is another method
+            if (password.getAttribute("type") == "password") {
+                password.setAttribute("type", "text");
+                show.innerText = "Hide";
+            } else {
+                password.setAttribute('type', 'password');
+                show.innerText = "Show";
+            }
+        })
+    </script>
+</body>
+
+</html>
